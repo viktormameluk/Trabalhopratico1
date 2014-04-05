@@ -1,12 +1,19 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
-		<head>
-			<meta charset="UTF-8"/>
-			<title>FALANDO UM POUCO SOBRE GITHUB</title>
-			<link rel="stylesheet" type="text/css" href="estilo.css"/>
-		</head>
-			<body>
-				<div id="interface">
+<head>
+  <title>Gestão de Configuração e Gestão de Versões de Softwares</title>
+  <link rel="stylesheet" type="text/css" href="estilo.css"/>
+  <style type="text/css">
+<!--
+h3 {text-indent: 80px;}
+p {text-indent: 3em;}
+h1 {color: green;}
+h1 {font-family: Lucida Calligraphy;}
+-->
+</style>
+</head>
+<body>
+	<div id="interface">
 
 	<header id="cabecalho">
         <hgroup>
@@ -14,63 +21,68 @@
 
 		</hgroup>
 		
-		
 
 		<nav id="menu">
 			<h1>Menu Principal</h1>
 			<ul type="disc">
 				<li><a href="index1.html">Home</a></li>
-				<li><a href="italo.html">Italo</a></li>
 				<li><a href="fred.html">Fred</a></li>
 				<li><a href="viktor.html">Viktor</a></li>
 			</ul>
 		</nav>		
 	</header>
+<h2>Autores</h2>
 
-<p>Git foi iniciado por Linus Torvalds, e é atualmente mantido por Junio ??C Hamano. Inúmeras contribuições vieram da lista de discussão git < git@vger.kernel.org >. http://www.ohloh.net/p/git/contributors/summary dá-lhe uma lista mais completa de contribuidores.
+<p>GitHub foi iniciado por Linus Torvalds, e é atualmente mantido por Junio C Hamano. Inúmeras contribuições vieram da lista de discussão git < git@vger.kernel.org >. http://www.ohloh.net/p/git/contributors/summary dá-lhe uma lista mais completa de contribuidores.
+
 Se você tem um clone de si mesmo git.git, a saída do git-shortlog  e git-culpa  pode mostrar-lhe os autores para partes específicas do projeto.</p>
+
+o que é Git?
+<p>Git é um sistema de controle de versão distribuído e um sistema de gerenciamento de código fonte, com ênfase em velocidade. O Git foi inicialmente projetado e desenvolvido por Linus Torvalds para o desenvolvimento do kernel Linux, mas foi adotado por muitos outros projetos.
+Cada diretório de trabalho do Git é um repositório com um histórico completo e habilidade total de acompanhamento das revisões, não dependente de acesso a uma rede ou a um servidor central.
+O Git é um software livre, distribuído sob os termos da versão 2 da GNU General Public License. Sua manutenção é atualmente supervisionada por Junio Hamano.</p>
 
 
 
 <h2>História Inicial</h2>
 
-<p>O desenvolvimento do Git surgiu após vários desenvolvedores do kernel (núcleo) do Linux decidirem desistir de acessar ao sistema do BitKeeper, que é um software proprietário. O acesso gratuito ao BitKeeper foi removido pelo detentor dos direitos autorais, Larry McVoy, depois de acusar Andrew Tridgell de usar de engenharia reversa nos protocolos do BitKeeper, alegando violação da licença do mesmo. Tridgell demonstrou, em uma apresentação na Linux.Conf.Au, realizada em 2005, que o processo de engenharia reversa utilizado não foi mais do que simplesmente direcionar um telnet para a porta apropriada de um servidor BitKeeper e digitar "help (ajuda)".
-Torvalds queria um sistema distribuído que ele pudesse utilizar de forma similar ao BitKeeper (BK), mas nenhum dos sistemas gratuitos disponíveis atendia suas necessidades, particularmente com relação à performance. Segue abaixo uma parte retirada de um e-mail, de 7 de Abril de 2005, escrito enquanto desenvolvia seu primeiro protótipo:
-De qualquer forma, os SCVs que olhei dificultam as coisas. Uma delas (a maior delas, na verdade) que estive trabalhando é fazer este processo ser realmente eficiente. Se leva meio minuto para aplicar um patch e ainda lembrar o que mudou, etc (e francamente, isso é rápido para a maioria dos SCVs por aí para um projeto do tamanho do Linux), daí uma série de 250 e-mails (que não é estranho acontecer quando eu sincronizo com o Andrew, por exemplo) demora duas horas. Se um dos patches no meio do processo não é aplicado, as coisas ficam realmente muito feias.
-Agora, o BK (BitKeeper) não era um inferno também (na verdade, comparado com todo o resto, o BK é um inferno em velocidade, geralmente em uma ou duas ordens de magnitude), e levou cerca de 10-15 segundos por e-mail quando mesclei meus arquivos com o Andrew. MESMO ASSIM, com o BK isso não era um problema tão grande, visto que mesclas de arquivos de BK?>BK eram tão fáceis, eu nunca precisei das lentas mesclas por e-mail com nenhum dos outros desenvolvedores principais. Então um "mesclador" de um SCV baseado em patches precisaria ser realmente mais rápido que o BK. O que realmente é extremamente difícil.
-Então eu estou escrevendo alguns scripts para tentar alinhar tudo mais rápido. Indicações iniciais são de que eu poderei fazer isso tão rápido quanto eu aplico patches, mas para ser franco, estou no máximo com metade pronto, e se eu estiver na direção errada, talvez essa não seja a mais pura verdade. De qualquer forma, a razão de que eu consigo criar tudo isso tão rápido é que meus scripts não serão um SCV, serão tipo um "registro de estado do Linus" bem específico. Isso vai fazer minhas mesclas lineares de patches muito mais eficientes no tempo, e nestas condições, possível.
-(Se a aplicação de um patch demora três segundos, até mesmo uma série grande de patches não é um problema: se eu for notificado em um minuto ou dois que falhou na metade do caminho, sem problemas, eu posso então simplesmente arrumar manualmente. É por isso que a latência é crítica - se eu tivesse que fazer as coisas efetivamente "desconectado", eu não poderia, por definição, arrumar as coisas quando problemas aparecessem).</p>
+<p>O desenvolvimento do Git surgiu após vários desenvolvedores do kernel (núcleo) do Linux decidirem desistir de acessar ao sistema do BitKeeper, que é um software proprietário. O acesso gratuito ao BitKeeper foi removido pelo detentor dos direitos autorais, Larry McVoy, depois de acusar Andrew Tridgell de usar de engenharia reversa nos protocolos do BitKeeper, alegando violação da licença do mesmo. Tridgell demonstrou, em uma apresentação na Linux.Conf.Au, realizada em 2005, que o processo de engenharia reversa utilizado não foi mais do que simplesmente direcionar um telnet para a porta apropriada de um servidor BitKeeper e digitar "help (ajuda)".</p>
+<p>Torvalds queria um sistema distribuído que ele pudesse utilizar de forma similar ao BitKeeper (BK), mas nenhum dos sistemas gratuitos disponíveis atendia suas necessidades, particularmente com relação à performance. Segue abaixo uma parte retirada de um e-mail, de 7 de Abril de 2005, escrito enquanto desenvolvia seu primeiro protótipo:</p>
+<p><br>De qualquer forma, os SCVs que olhei dificultam as coisas. Uma delas (a maior delas, na verdade) que estive trabalhando é fazer este processo ser realmente eficiente. Se leva meio minuto para aplicar um patch e ainda lembrar o que mudou, etc (e francamente, isso é rápido para a maioria dos SCVs por aí para um projeto do tamanho do Linux), daí uma série de 250 e-mails (que não é estranho acontecer quando eu sincronizo com o Andrew, por exemplo) demora duas horas. Se um dos patches no meio do processo não é aplicado, as coisas ficam realmente muito feias.</p><br>
+<p><br>Agora, o BK (BitKeeper) não era um inferno também (na verdade, comparado com todo o resto, o BK é um inferno em velocidade, geralmente em uma ou duas ordens de magnitude), e levou cerca de 10-15 segundos por e-mail quando mesclei meus arquivos com o Andrew. MESMO ASSIM, com o BK isso não era um problema tão grande, visto que mesclas de arquivos de BK?>BK eram tão fáceis, eu nunca precisei das lentas mesclas por e-mail com nenhum dos outros desenvolvedores principais. Então um "mesclador" de um SCV baseado em patches precisaria ser realmente mais rápido que o BK. O que realmente é extremamente difícil.</p><br>
+<p><br>Então eu estou escrevendo alguns scripts para tentar alinhar tudo mais rápido. Indicações iniciais são de que eu poderei fazer isso tão rápido quanto eu aplico patches, mas para ser franco, estou no máximo com metade pronto, e se eu estiver na direção errada, talvez essa não seja a mais pura verdade. De qualquer forma, a razão de que eu consigo criar tudo isso tão rápido é que meus scripts não serão um SCV, serão tipo um "registro de estado do Linus" bem específico. Isso vai fazer minhas mesclas lineares de patches muito mais eficientes no tempo, e nestas condições, possível.</p><br>
+<p><br>(Se a aplicação de um patch demora três segundos, até mesmo uma série grande de patches não é um problema: se eu for notificado em um minuto ou dois que falhou na metade do caminho, sem problemas, eu posso então simplesmente arrumar manualmente. É por isso que a latência é crítica - se eu tivesse que fazer as coisas efetivamente "desconectado", eu não poderia, por definição, arrumar as coisas quando problemas aparecessem).</p><br>
 
-Torvalds teve vários critérios para o projeto:
-Tomar o CVS como um exemplo do que não fazer; na dúvida, tomar exatamente a decisão contrária. Para citar Torvalds, de certa forma mordendo a língua:
-"Nos primeiros 10 anos de manutenção do kernel, nós literalmente usamos patches de tarballs, o que é muito superior como controle de versão que o CVS, mas eu acabei usando o CVS por 7 anos em uma empresa comercial [Transmeta ] e eu odiava de paixão. Quando eu digo que eu odiava de paixão, eu também tenho que dizer que, se houver algum usuário de SVN (Subversion) na platéia, talvez você queira sair. Porque meu ódio pelo CVS significa que eu vejo o Subversion como sendo o projeto iniciado mais sem objetivo de todos os tempos. O slogan do Subversion por um tempo foi "CVS feito [do jeito] certo", ou algo assim, e se você começa com esse slogan, você não vai a lugar nenhum. Não tem como o CVS fazer [do jeito] certo."
-Suportar um fluxo distribuído, como o BitKeeper
-"O BitKeeper não foi simplesmente o primeiro sistema de versionamento que eu senti que absolutamente valia a pena, foi também o sistema de controle de versão que me ensinou porque eles tem um objetivo, e como você realmente deve fazer as coisas. Então o Git, de várias formas, mesmo que de uma visão técnica muito diferente do BitKeeper (e isso foi outro objetivo de projeto, porque eu queria deixar claro que não era um plágio do BitKeeper), muitos dos fluxos que usamos no Git vieram diretamente dos fluxos que aprendemos com o BitKeeper."
-Várias firmes proteções contra corrompimento de arquivos, seja por acidente ou origem maldosa
-Alta performance
-Os primeiros três critérios acima eliminam cada controle de versão pré-existente ao Git, exceto pelo Monotone, e o quarto elimina todos. Então, imediatamente depois de liberar a versão 2.6.12-rc2 de desenvolvimento do kernel do Linux, ele começou a desenvolver o seu próprio.
+<p>Torvalds teve vários critérios para o projeto:</P>
+<br>Tomar o CVS como um exemplo do que não fazer; na dúvida, tomar exatamente a decisão contrária. Para citar Torvalds, de certa forma mordendo a língua:
+"Nos primeiros 10 anos de manutenção do kernel, nós literalmente usamos patches de tarballs, o que é muito superior como controle de versão que o CVS, mas eu acabei usando o CVS por 7 anos em uma empresa comercial [Transmeta ] e eu odiava de paixão. Quando eu digo que eu odiava de paixão, eu também tenho que dizer que, se houver algum usuário de SVN (Subversion) na platéia, talvez você queira sair. Porque meu ódio pelo CVS significa que eu vejo o Subversion como sendo o projeto iniciado mais sem objetivo de todos os tempos. O slogan do Subversion por um tempo foi "CVS feito [do jeito] certo", ou algo assim, e se você começa com esse slogan, você não vai a lugar nenhum. Não tem como o CVS fazer [do jeito] certo."<br>
+<br>Suportar um fluxo distribuído, como o BitKeeper
+"O BitKeeper não foi simplesmente o primeiro sistema de versionamento que eu senti que absolutamente valia a pena, foi também o sistema de controle de versão que me ensinou porque eles tem um objetivo, e como você realmente deve fazer as coisas. Então o Git, de várias formas, mesmo que de uma visão técnica muito diferente do BitKeeper (e isso foi outro objetivo de projeto, porque eu queria deixar claro que não era um plágio do BitKeeper), muitos dos fluxos que usamos no Git vieram diretamente dos fluxos que aprendemos com o BitKeeper."<br>
+<br>Várias firmes proteções contra corrompimento de arquivos, seja por acidente ou origem maldosa<br>
+<br>Alta performance<br>
+<p>Os primeiros três critérios acima eliminam cada controle de versão pré-existente ao Git, exceto pelo Monotone, e o quarto elimina todos. Então, imediatamente depois de liberar a versão 2.6.12-rc2 de desenvolvimento do kernel do Linux, ele começou a desenvolver o seu próprio.
 O desenvolvimento do Git começou em 3 de Abril de 2005. O projeto foi anunciado em 6 de Abril, e tornou-se auto-hospedeiro no dia 7 de Abril. A primeira mescla de arquivos (merge) em múltiplos ramos (branches) foi realizado em 18 de Abril. Torvalds alcançou seus objetivos de performance; em 29 de Abril, o recém-nascido Git se tornou referência ao registrar patches para a árvore de desenvolvimento do kernel do Linux na taxa de 6,7 por segundo. No dia 16 de Junho, a entrega do kernel 2.6.12 foi gerenciada pelo Git.
-Mesmo que fortemente influenciado pelo BitKeeper, Torvalds deliberadamente tentou evitar abordagens tradicionais, levando a um design único. Ele desenvolveu o sistema até que fosse possível sua utilização por usuários técnicos, entregando então a manutenção do software para Junio Hamano, um dos principais colaboradores do projeto, em 16 de Julho de 2005. Hamano foi responsável pela entrega da versão 1.0 em 21 de dezembro de 2005, e continua como responsável pela manutenção do mesmo.
+Mesmo que fortemente influenciado pelo BitKeeper, Torvalds deliberadamente tentou evitar abordagens tradicionais, levando a um design único. Ele desenvolveu o sistema até que fosse possível sua utilização por usuários técnicos, entregando então a manutenção do software para Junio Hamano, um dos principais colaboradores do projeto, em 16 de Julho de 2005. Hamano foi responsável pela entrega da versão 1.0 em 21 de dezembro de 2005, e continua como responsável pela manutenção do mesmo.</p>
 
-Características[editar | editar código-fonte]
-O projeto do Git é uma síntese da experiência de Torvalds com a manutenção do desenvolvimento altamente distribuído do projeto do Linux, junto com seu íntimo conhecimento de performance de sistemas de arquivos (conhecimentos adquiridos no mesmo projeto) e a necessidade urgente de produzir um sistema funcional em um curto espaço de tempo. Essas influências o levaram às seguintes escolhas de implementação:
-Suporte consistente para desenvolvimentos não-lineares
+<h2>Características<h2>
+<p>O projeto do Git é uma síntese da experiência de Torvalds com a manutenção do desenvolvimento altamente distribuído do projeto do Linux, junto com seu íntimo conhecimento de performance de sistemas de arquivos (conhecimentos adquiridos no mesmo projeto) e a necessidade urgente de produzir um sistema funcional em um curto espaço de tempo. Essas influências o levaram às seguintes escolhas de implementação:</P>
+<h4>Suporte consistente para desenvolvimentos não-lineares<h4>
 O Git suporta rápidas criações de ramos (branches) e mesclas (merges), e inclui ferramentas específicas para visualização e navegação de históricos de desenvolvimento não-lineares. Uma suposição intrínseca no Git é que uma mudança será mesclada mais do que é escrita, enquanto é passada por vários revisores.
-Desenvolvimento distribuído
+<h4>Desenvolvimento distribuído<h4>
 Assim como o Darcs, o BitKeeper, o Mercurial, o SVK, o Bazaar e o Monotone, o Git dá a cada desenvolvedor uma cópia local completa de todo o histórico de desenvolvimento, e as mudanças são copiadas de um único repositório para outro. Estas mudanças são importadas como ramos (branches) adicionais de desenvolvimento, e podem sofrer uma mescla (merge) da mesma forma que um ramo de desenvolvimento local.
-Compatibilidade com protocolos/sistemas existentes
+<h4>Compatibilidade com protocolos/sistemas existentes<h4>
 Repositórios podem ser publicados por HTTP, FTP, rsync, um protocolo Git sobre uma porta conhecida ou por ssh. O Git também tem uma emulação de servidor CVS, o que habilita a existência de clientes CVS e extensões (plugins) em diversos ADIs a utilizar os repositórios Git. O Subversion e o svk podem utilizar os repositórios diretamente com o git-svn.
-Manipulação eficiente de projetos extensos
+<h4>Manipulação eficiente de projetos extensos<h4>
 Torvalds descreveu o Git como sendo veloz e escalável, e testes de performance realizados pela Mozilla apontaram que o Git é uma ordem de magnitude mais rápido que alguns sistemas de controle de versão. Obter o histórico das revisões salvos em repositórios locais resulta ser duas ordens de magnitude mais rápido que obtê-los de um servidor remoto. Um detalhe interessante é que o Git não fica mais lento com o aumento do histórico do projeto.
-Autenticação criptográfica do histórico
+<h4>Autenticação criptográfica do histórico<h4>
 O histórico do Git é salvo de uma maneira que o nome de uma determinada revisão (um "commit", ou entrega, nos termos do Git) depende de todo o histórico de desenvolvimento que leva até este commit. Uma vez publicado, não é possível mudar as versões antigas sem passar despercebido. A estrutura é similar a uma árvore hash (hash tree), mas com dados adicionais nos nós e nas folhas. (o Mercurial e o Monotone também possuem esta propriedade.)
-Modelo baseado em ferramentas
+<h4>Modelo baseado em ferramentas<h4>
 O Git foi modelado como um conjunto de programas escrito em C, e numerosos scripts em shell que encapsulam estes programas. Embora muitos destes scripts tenham sido reescritos em C, como parte de um esforço de portar o Git para o Windows, o modelo básico continua, sendo fácil agrupar seus componentes.
-Estratégias de mescla (merge) conectáveis
+<h4>Estratégias de mescla (merge) conectáveis<h4>
 Como parte de desenho em ferramentas, o Git tem um conjunto bem definido de modelos de uma mescla incompleta, e possuí vários algoritimos para completá-las, culminando em comunicar ao usuário que é incapaz de completar o merge automaticamente, sendo necessária uma edição manual.
-O lixo se acumula se não for limpo
+<h4>O lixo se acumula se não for limpo<h4>
 Abortar operações ou desfazer mudanças irá deixar objetos sem valor pendentes no banco de dados. Existe porém uma pequena fração desejável de objetos no sempre crescente histórico, mas liberar o espaço usando git gc --prune pode ser uma operação lenta.
-Empacotamento periódico explícito de objetos
+<h4>Empacotamento periódico explícito de objetos<h4>
 O Git armazena cada novo objeto criado como um arquivo separado. Embora cada arquivo seja individualmente comprimido, isso requer um espaço considerável no disco e é ineficiente. Isto é resolvido com o uso de "pacotes" que armazenam um grande número de objetos em um único arquivo (ou pela rede), comprimidos pelo delta entre eles. Pacotes são comprimidos usando a heurística de que arquivos com o mesmo nome são provavelmente similares, mas que não dependam exatamente disso. Mesmo assim, novos objetos criados (novo histórico adicionado) são gravados um a um, e reempacotamentos periódicos são necessários para manter o espaço de forma eficiente. O Git faz reempacotamentos periódicos automaticamente, mas também é possível fazer reempacotamentos manuais com o comando git gc.
 Outra propriedade do Git é que ele salva o estado (snapshot) dos diretórios de arquivos. Os sistemas mais antigos de controle de versão de código fonte, Sistemas de Controle de Código Fonte (SCCF) e Sistemas de Controle de Revisão (SCR), trabalhavam em cima de arquivos individuais, enfatizando o espaço em disco ganho por intercalação de deltas (SCCF) ou por encodificação de deltas (RCS) entre versões (mais similares). Sistemas de controle de versão posteriores mantiveram esta noção de arquivos possuírem uma identidade atráves de múltiplas revisões de um projeto. Porém, Torvalds rejeitou esse conceito. Consequentemente, o Git não salva relacionamentos entre revisão de arquivos em nenhum nível abaixo da árvore de diretório do código fonte.
 Relacionamentos inexplícitos de revisão remete a consequências significativas:
@@ -81,13 +93,13 @@ resolve (resolver): o tradicional algoritmo de merge em três vias.
 recursive (recursivo): Este é o padrão quando baixando ou mesclando um branch, uma variante do algortimo de mescla em três vias. Quando há mais de um ancestral comum que pode ser usado em um merge de três vias, cria-se uma árvore de merge dos ancestrais comuns e usa-se isso como a árvoe de referência para o merge em três vias. Isto têm resultado em menor número de conflitos em merges sem causar merges errados por testes realizados em merges tirados do histórico de desenvolvimento do kernel do Linux 2.6. Adicionalmente pode detectar e lidar com merges envolvendo renomeamentos."
 octopus (polvo): Este é o padrão quando efetuado merge em mais de duas heads.
 
-Portabilidade[editar | editar código-fonte]
+<h2>Portabilidade
 
-O Git está primariamente desenvolvido para Linux, mas pode ser usados em outros sistemas operacionais baseados no Unix, incluindo o BSD, o Solaris e o Darwin. O Git é extremamente rápido em arquiteturas POSIX como o Linux.
-O Git também roda no Microsoft Windows. Existem duas variantes:
-Uma adaptação nativa para Microsoft Windows, chamada msysgit (usando MSYS da MinGW). Ao passo que é relativamente mais vagaroso que a versão para o Linux, ele é aceitavelmente rápido e é notoriamente usado em produção, com apenas algumas dificuldade menores. Em particular, alguns comandos ainda não estão disponíveis nas GUIs, e precisam ser chamadas por linha de comando.
-O git também roda em cima do Cygwin (uma camada de emulação POSIX), embora é notoriamente mais lento, especialmente para comando escritos em shell script. Isto é causado principalmente pelo alto custo realizado pelo comando fork emulado pelo Cygwin. Entretanto, as recentes reescritas de vários comandos do Git (originalmente escritas em shell script) para a linguagem C, resultou em um ganho significativo de performance no Windows.
-Outras alternativas para rodar o Git incluí:
+<p>O Git está primariamente desenvolvido para Linux, mas pode ser usados em outros sistemas operacionais baseados no Unix, incluindo o BSD, o Solaris e o Darwin. O Git é extremamente rápido em arquiteturas POSIX como o Linux.</p>
+<h4>O Git também roda no Microsoft Windows. Existem duas variantes:<h4>
+<p>Uma adaptação nativa para Microsoft Windows, chamada msysgit (usando MSYS da MinGW). Ao passo que é relativamente mais vagaroso que a versão para o Linux, ele é aceitavelmente rápido e é notoriamente usado em produção, com apenas algumas dificuldade menores. Em particular, alguns comandos ainda não estão disponíveis nas GUIs, e precisam ser chamadas por linha de comando.
+O git também roda em cima do Cygwin (uma camada de emulação POSIX), embora é notoriamente mais lento, especialmente para comando escritos em shell script. Isto é causado principalmente pelo alto custo realizado pelo comando fork emulado pelo Cygwin. Entretanto, as recentes reescritas de vários comandos do Git (originalmente escritas em shell script) para a linguagem C, resultou em um ganho significativo de performance no Windows.</p>
+<h4>Outras alternativas para rodar o Git incluí:<h4>
 git-cvsserver (que emula um servidor CVS, permitindo seu uso em cliente CVS para Windows):
 Ambientes de desenvolvimento baseados em Eclipse para Git, baseado em implementações puras em Java no interior do Git: egit
 Suporte do NetBeans para o Git está em desenvolvimento e está também disponível pelo plugin NbGit
@@ -97,9 +109,9 @@ Xcode 4 - assim como a versão 4 de demonstração, o git está disponível como part
 Git# é uma implementação .Net/Mono do git.
 Refatorar as operações de mais baixo nível em bibliotecas poderia, teoricamente, permitir a reimplementação do componente de níveis mais altos para o Windows sem reescrever o resto.
 
-Adoção[editar | editar código-fonte]
 
-Hospedagem de código fonte[editar | editar código-fonte]
+
+<h2>Hospedagem de código fonte<h2>
 Os seguintes websites provêm hospedagem gratuita de código fonte para repositório Git:48
 BerliOS
 GitHub

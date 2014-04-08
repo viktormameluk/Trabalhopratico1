@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8"/>
+   <link rel="stylesheet" type="text/css" href="estilo.css"/>
+		</head>
+			<body>
+				<div id="interface">
+
+	<header id="cabecalho">
+        <hgroup>
+				<h1>GITHUB</h1>
+
+		</hgroup>
+		
+		
+
+		<nav id="menu">
+			<h1>Menu Principal</h1>
+			<ul type="disc">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="italo.html">Italo</a></li>
+				<li><a href="fred.html">Fred</a></li>
+			
+			</ul>
+		</nav>		
+	</header>
+
+<h1> <b>Breve História do Git</b> </h1>
+<p>O Git é um sistema de controle de versão (ou versionamento), VCS (do inglês version control system) ou ainda SCM (do inglês source code management) distribuído que está sendo cada vez mais usado, pois foca em velocidade e robustez.</p> <p> Um sistema de controle de versão tem a finalidade de gerenciar as diferentes versões de um documento. É muito utilizado por empresas de desenvolvimento de software que possuem grandes equipes e precisam manter organizado, documentado e arquivado tudo o que foi e está sendo implementado no software.</p>
+Como exemplo de projetos que utilizam o Git temos: Arch Linux, Android, Debian, Digg, Eclipse, Fedora, GNOME, jQuery, openSUSE, Ruby on Rails, Samba, Yahoo UI Library, entre outros.</p>
+Assim como muitas coisas boas na vida, o Git começou com um tanto de destruição criativa e controvérsia acirrada. O kernel (núcleo) do Linux é um projeto de software de código aberto de escopo razoavelmente grande. Durante a maior parte do período de manutenção do kernel do Linux (1991-2002), as mudanças no software eram repassadas como patches e arquivos compactados. Em 2002, o projeto do kernel do Linux começou a usar um sistema DVCS proprietário chamado<b> BitKeeper.</b> 
+Em 2005, o relacionamento entre a comunidade que desenvolvia o kernel e a empresa que desenvolvia comercialmente o BitKeeper se desfez, e o status de<b> <u> isento-de-pagamento </b> </u> da ferramenta(Linux) foi revogado. 
+<hr>
+<h1> <b>Criador</b> </h1>
+
+<p>Os Desenvolvedores do Linux (em particular <u>Linus Torvalds</u>, o criador do Linux) vem a desenvolver sua própria ferramenta baseada nas lições que eles aprenderam ao usar o BitKeeper. Alguns dos objetivos do novo sistema eram:
+<p>•	Velocidade </p>
+<p>•	Design simples</p>
+<p>•	Suporte robusto a desenvolvimento não linear (milhares de branches paralelos)</p>
+<p>•	Totalmente distribuído</p>
+<p>•	Capaz de lidar eficientemente com grandes projetos como o kernel do Linux (velocidade e volume de dados)</p>
+Desde sua concepção em 2005, o Git evoluiu e amadureceu a ponto de ser um sistema fácil de usar e ainda assim mantém essas qualidades iniciais. É incrivelmente rápido, bastante eficiente com grandes projetos e possui um sistema impressionante de branching para desenvolvimento não-linear
+</p>
+<hr>
+<h1><b>Comandos </h1></b>
+
+<p><h2>Tags:</h2>
+Uma tag é utilizada para criar uma versão de lançamento.
+git tag v1.0 (Cria a tag v1.0)</p>
+<br></br>
+<p><h2>Patches:</h2>
+git format-patch <branch> --stdout > patch.diff (Cria um patch)
+<p>git am patch.diff (Aplica o patch)</p>
+<br></br>
+<p><h2>Repositórios :</h2>
+<p>git clone repo1 repo2 (Clona um repositório e add o repo1 como orign no repo2)</p>
+<p>git remote show origin (Origin é uma convenção para o primeiro remote)</p>
+<p>git push origin (Envia o commit local para o repositório remoto)</p>
+<p>git push origin outrobranch (O mesmo acima mas para um determinado branch)</p>
+</hgroup>
+</body>
+</html>

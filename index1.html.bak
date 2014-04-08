@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+		<head>
+			<meta charset="UTF-8"/>
+			<title>FALANDO UM POUCO SOBRE GITHUB</title>
+			<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		</head>
+			<body>
+				<div id="interface">
+
+	<header id="cabecalho">
+        <hgroup>
+				<h1>GITHUB</h1>
+
+		</hgroup>
+		
+		
+
+		<nav id="menu">
+			<h1>Menu Principal</h1>
+			<ul type="disc">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="italo.html">Italo</a></li>
+				<li><a href="fred.html">Fred</a></li>
+				<li><a href="viktor.html">Viktor</a></li>
+			</ul>
+		</nav>		
+	</header>
+
+<hgroup>
+<h3>Trabalho > &nbsp; &nbsp; GitHub</h3> </br></br>
+<h1>Saiba tudo sobre o GitHub</h1>
+<h2>por alunos do Curso Técnico em Informática </h2>
+<h3>Italo Vinicius Lopes</h3>
+<h3>Frederico Viana</h3>
+<h3>Victor Mameluk</h3>
+</hgroup>
+<h2>O que é GitHub</h2>
+<p> 
+<p><b>GitHub</b> é um sistema de controle de versão distribuído e um sistema de gerenciamento de código fonte, com ênfase em velocidade. O Git foi inicialmente projetado e desenvolvido por Linus Torvalds para o desenvolvimento do kernel Linux, mas foi adotado por muitos outros projetos.
+Cada diretório de trabalho do Git é um repositório com um histórico completo e habilidade total de acompanhamento das revisões, não dependente de acesso a uma rede ou a um servidor central.
+O Git é um software livre, distribuído sob os termos da versão 2 da GNU General Public License. Sua manutenção é atualmente supervisionada por Junio Hamano.</p>
+
+
+<figure class="foto-legenda">
+<img src="images.jpg" width=100% />
+<figcaption>
+	
+</figcaption>
+</figure>
+
+
+<div/>
+<body/>
+<html/>
